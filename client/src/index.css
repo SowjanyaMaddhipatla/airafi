@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+   AiraFi Design Tokens — Sky Blue Pastel
+   No gradients, no purple, no glassmorphism. Flat, calm, minimal.
+--------------------------------------------------------------------- */
+@theme {
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: #F5FAFF;
+  --color-surface: #FFFFFF;
+  --color-border: #E3EEF7;
+
+  --color-primary-50: #EAF4FC;
+  --color-primary-100: #D3E9F9;
+  --color-primary-300: #A8D2F0;
+  --color-primary-500: #7DB9E8;
+  --color-primary-600: #4A90D9;
+  --color-primary-700: #3874B3;
+
+  --color-income: #A8E6CF;
+  --color-income-text: #2F7A5C;
+  --color-expense: #FFB4A2;
+  --color-expense-text: #B5533B;
+
+  --color-text: #2E3A46;
+  --color-text-muted: #6B7C8C;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Tabular monospace numerals — AiraFi's signature: every money figure in
+   the app reads with fixed-width digits, so amounts align like a real ledger. */
+.figure {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+::selection {
+  background-color: var(--color-primary-300);
+}
